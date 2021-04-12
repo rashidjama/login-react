@@ -1,16 +1,18 @@
-import React, {useContext} from 'react'
-import {ThemeContext} from './Contexts/ThemeContext'
+import React, { useContext } from 'react';
+import { ThemeContext } from './contexts/Theme';
 
 function PageContent(props) {
-  const { isDarkMode } = useContext(ThemeContext)
-    const styles = {
-      width: '100vw',
-      height: '100vh',
-      backgroundColor: isDarkMode ? '#333': 'white',
-    }
-    return (
-      <div style={styles}>{props.children}</div>
-    )
+  const { darkMode } = useContext(ThemeContext)
+  const styles = {
+    width: '100vw',
+    height: '100vh',
+    backgroundColor: darkMode ? '#333' : '#fff',
+    overflowY: 'scroll',
+  }
+  return (
+    <div style={styles}>
+      {props.children}
+    </div>
+  )
 }
-
 export default PageContent

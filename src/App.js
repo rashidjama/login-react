@@ -1,19 +1,8 @@
-import Form from "./Form";
-import Navbar from "./Navbar";
-import PageContent from './PageContent';
-import ThemeProvider from './Contexts/ThemeContext';
-import LanguageProvider from './Contexts/LanguageContext'
+import Nav from './Nav'
 
 function App() {
   return (
-    <ThemeProvider>
-    <LanguageProvider>
-    <PageContent>
-      <Navbar />
-      <Form />
-    </PageContent>
-    </LanguageProvider>
-    </ThemeProvider>
+    <Nav />
   );
 }
 
